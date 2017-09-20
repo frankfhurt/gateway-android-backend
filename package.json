@@ -1,0 +1,29 @@
+{
+  "name": "gateway-android-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Franklyn Vieira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.21.2"
+  },
+  "cloud": {
+    "msg": "Hello, world!"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node index.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test index",
+    "test": "npm run system-test",
+    "e2e-test": "samples test deploy"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "1.3.1"
+  }
+}
