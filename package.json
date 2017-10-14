@@ -6,17 +6,21 @@
   "author": "Franklyn Vieira",
   "license": "ISC",
   "dependencies": {
-    "express": "^3.21.2"
+    "body-parser": "^1.18.2",
+    "express": "^3.21.2",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.12.0",
+    "nconf": "^0.8.5"
   },
   "cloud": {
     "msg": "Hello, world!"
   },
   "engines": {
-    "node": ">=4.3.2"
+    "node": ">=6.11.3"
   },
   "scripts": {
     "deploy": "gcloud app deploy",
-    "start": "node index.js",
+    "start": "node ./server.js",
     "lint": "samples lint",
     "pretest": "npm run lint",
     "system-test": "samples test index",
@@ -25,5 +29,9 @@
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankfhurt/gateway-android-backend.git"
   }
 }
